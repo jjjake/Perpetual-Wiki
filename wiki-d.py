@@ -1,5 +1,11 @@
 #!/1/data/ENV/bin/python
 
+
+"""
+todo:
+fix max dir size to ~300 GB
+"""
+
 import logging,logging.config
 import datetime
 import os
@@ -22,12 +28,13 @@ def mkdir(dirname):
 def makeMeta(identifier):
     identifier = str(identifier.strip('/'))
     f = open("%s_files.xml" % identifier, 'wb')
-    f.write('</files>')
+    f.write('<files/>')
     f.close()
     grabDate = str(datetime.date.today())
     creationDate = identifier.split('-')[-1]
     meta = { 'collection': 'wikipediadumps', 'mediatype': 'web',
              'creator': 'Wikipedia', 'date': creationDate,
+             'title': identifier.replace('-',' '), 
              'licenseurl': 'http://creativecommons.org/licenses/by-nc-sa/3.0/us/',
              'description': 'Retrieved from wikipedia.org on %s' % grabDate }
     root = etree.Element('metadata')
@@ -42,7 +49,8 @@ def makeMeta(identifier):
 
 def main():
     
-    ### Perpetual Loop Auto-submit business:
+    ''' <Perpetual Loop Auto-submit business> '''
+
     list_home = os.getcwd()
     readyListFileName = "ready_list.txt"
     lockFileName = readyListFileName + ".lck"
@@ -65,6 +73,8 @@ def main():
     touchLo = open(lockFileName, 'wb')
     touchLo.write('')
     touchLo.close()
+
+    ''' <Peprpetual Loop Auto-submit business /> '''
 
     mkdir('/1/incoming/tmp/wiki-dumps')
     home = os.getcwd()
@@ -97,7 +107,7 @@ def main():
                 dirURL = url + dumpFile['href'].strip('/')
                 fname = dumpFile['href'].split('/')[-1]
                 flogger.info('Downloading: %s' % dirURL)
-                wget = 'wget -nc %s' % dirURL
+                wget = 'wget -c %s' % dirURL
                 execute = call(wget, shell=True)
         os.chdir(home)
 
