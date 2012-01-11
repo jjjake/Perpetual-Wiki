@@ -33,8 +33,7 @@ def makeMeta(identifier):
     grabDate = str(datetime.date.today())
     creationDate = identifier.split('-')[-1]
     meta = { 'collection': 'wikipediadumps', 'mediatype': 'web',
-             'creator': 'Wikipedia', 'date': creationDate,
-             'title': identifier.replace('-',' '), 
+             'creator': 'Wikipedia', 'date': creationDate, 'title': identifier,
              'licenseurl': 'http://creativecommons.org/licenses/by-nc-sa/3.0/us/',
              'description': 'Retrieved from wikipedia.org on %s' % grabDate }
     root = etree.Element('metadata')
@@ -50,7 +49,6 @@ def makeMeta(identifier):
 def main():
     
     ''' <Perpetual Loop Auto-submit business> '''
-
     list_home = os.getcwd()
     readyListFileName = "ready_list.txt"
     lockFileName = readyListFileName + ".lck"
@@ -73,7 +71,6 @@ def main():
     touchLo = open(lockFileName, 'wb')
     touchLo.write('')
     touchLo.close()
-
     ''' <Peprpetual Loop Auto-submit business /> '''
 
     mkdir('/1/incoming/tmp/wiki-dumps')
@@ -91,8 +88,9 @@ def main():
         # (i.e. 20110901/,20110908/,20111010/,etc.)
         itemHTML = urllib2.urlopen(url + link['href']).read()
         dirStrainer = SoupStrainer('a', href=re.compile('20'))
+	print dirStrainer
         dirLinks = ( [tag for tag in BeautifulSoup(itemHTML,
-                     parseOnlyThese=dirStrainer)][0] )
+                     parseOnlyThese=dirStrainer)][-1] )
 
         for itemDIR in dirLinks:
             identifier = ( "%s-%s" % (link['href'].strip('/'),itemDIR) )
