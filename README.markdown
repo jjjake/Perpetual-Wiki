@@ -17,30 +17,30 @@ directroy named `aawiki-20111010`):
      aawiki-20111010-pages-meta-history.xml.7z
      aawiki-20111010-pages-meta-history.xml.bz2
      aawiki-20111010-pages-logging.xml.gz
-     aawiki-20111010-pages-meta-current.xml.bz2 89 KB
-     aawiki-20111010-pages-articles.xml.bz2 26 KB
-     aawiki-20111010-stub-meta-history.xml.gz 45 KB
-     aawiki-20111010-stub-meta-current.xml.gz 21 KB
-     aawiki-20111010-stub-articles.xml.gz 7 KB
-     aawiki-20111010-abstract.xml 533 bytes
-     aawiki-20111010-all-titles-in-ns0.gz 53 bytes
-     aawiki-20111010-iwlinks.sql.gz 774 bytes
-     aawiki-20111010-redirect.sql.gz 959 bytes
-     aawiki-20111010-protected_titles.sql.gz 856 bytes
-     aawiki-20111010-page_props.sql.gz 703 bytes
-     aawiki-20111010-page_restrictions.sql.gz 910 bytes
-     aawiki-20111010-page.sql.gz 11 KB
-     aawiki-20111010-category.sql.gz 1 KB
-     aawiki-20111010-user_groups.sql.gz 837 bytes
-     aawiki-20111010-interwiki.sql.gz 8 KB
-     aawiki-20111010-langlinks.sql.gz 44 KB
-     aawiki-20111010-externallinks.sql.gz 3 KB
-     aawiki-20111010-templatelinks.sql.gz 2 KB
-     aawiki-20111010-imagelinks.sql.gz 1 KB
-     aawiki-20111010-categorylinks.sql.gz 2 KB
-     aawiki-20111010-pagelinks.sql.gz 4 KB
-     aawiki-20111010-oldimage.sql.gz 1004 bytes
-     aawiki-20111010-image.sql.gz 984 bytes
+     aawiki-20111010-pages-meta-current.xml.bz2
+     aawiki-20111010-pages-articles.xml.bz2
+     aawiki-20111010-stub-meta-history.xml.gz
+     aawiki-20111010-stub-meta-current.xml.gz
+     aawiki-20111010-stub-articles.xml.gz
+     aawiki-20111010-abstract.xml
+     aawiki-20111010-all-titles-in-ns0.gz
+     aawiki-20111010-iwlinks.sql.gz
+     aawiki-20111010-redirect.sql.gz
+     aawiki-20111010-protected_titles.sql.gz
+     aawiki-20111010-page_props.sql.gz
+     aawiki-20111010-page_restrictions.sql.gz
+     aawiki-20111010-page.sql.gz
+     aawiki-20111010-category.sql.gz
+     aawiki-20111010-user_groups.sql.gz
+     aawiki-20111010-interwiki.sql.gz
+     aawiki-20111010-langlinks.sql.gz
+     aawiki-20111010-externallinks.sql.gz
+     aawiki-20111010-templatelinks.sql.gz
+     aawiki-20111010-imagelinks.sql.gz
+     aawiki-20111010-categorylinks.sql.gz
+     aawiki-20111010-pagelinks.sql.gz
+     aawiki-20111010-oldimage.sql.gz
+     aawiki-20111010-image.sql.gz
      aawiki-20111010-site_stats.sql.gz
      aawiki-20111010_meta.xml
      aawiki-20111010_files.xml
